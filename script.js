@@ -92,7 +92,7 @@ function weatherCardDashboard(){
       async function weatherApiCall(){
         try {
           localStorage.setItem('localhour',JSON.stringify(new Date().getHours()))
-          const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${lon}`);
+          const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${lat},${lon}`);
           if (!response.ok){
              throw new Error(`HTTP error! Status: ${response.status}`) 
             }
